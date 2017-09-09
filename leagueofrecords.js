@@ -81,7 +81,7 @@ Leagueofrecords.prototype.createTable = function(league, startRank, type) {
 
   var footer = '</tbody></table>';
 
-  return [header, body, footer].join('');
+  return [header, body.join(''), footer].join('');
 }
 
 Leagueofrecords.prototype.createTitle = function() {
