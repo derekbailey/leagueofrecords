@@ -37,7 +37,7 @@ function testRiotAPI() {
 function testCreateEntry() {
   module('CreateEntry', {
     setup: function () {
-      records = new Leagueofrecords('kr', 'RGAPI-e250972c-062f-4f25-b9ce-3bfe65fdc732');
+      records = new Leagueofrecords('kr', '');
     }
   });
 
