@@ -70,7 +70,7 @@ Leagueofrecords.prototype.createTable = function(league, startRank, type) {
   for (var i = 0; i < players.length; i++) {
     body.push([
         '<tr>',
-          '<td>' + (startRank).toString() + '</td>',
+          '<td>' + startRank.toString() + '</td>',
           '<td>' + players[i].leaguePoints + '</td>',
           '<td>' + players[i].playerOrTeamId + '</td>',
           '<td>' + players[i].playerOrTeamName + '</td>',
@@ -86,15 +86,15 @@ Leagueofrecords.prototype.createTable = function(league, startRank, type) {
 
 Leagueofrecords.prototype.createTitle = function() {
   var createDate = function() {
-    var padding_zero = function(num) {
+    var paddingZero = function(num) {
       var res = ('00' + num.toString()).slice(-2);
       if (res === '0' ) { return '00'; }
       return res;
     }
     var d = new Date();
     var year = d.getFullYear().toString();
-    var month = padding_zero(d.getMonth() + 1);
-    var date = padding_zero(d.getDate());
+    var month = paddingZero(d.getMonth() + 1);
+    var date = paddingZero(d.getDate());
     return year + '/' + month + '/' + date;
   }
 
