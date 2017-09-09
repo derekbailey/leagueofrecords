@@ -115,15 +115,12 @@ Leagueofrecords.prototype.createEntryFormat = function(body) {
 }
 
 Leagueofrecords.prototype.create = function() {
-  // get data
   var challengerLeague = this.getChallengerList();
   var masterLeague = this.getMasterList();
 
-  // create table
   var body = [];
   body.push(this.createTable(challengerLeague));
   body.push(this.createTable(masterLeague, 200));
 
-  // entry
   return this.createEntryFormat(body.join(''));
 }
